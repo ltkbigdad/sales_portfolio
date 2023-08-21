@@ -20,7 +20,7 @@ export const MyServices = () => {
                         <p className="tittleParagraph">Desenvolvimento Web Personalizado</p>
                         <p className="paragraph">Crio sites e aplicações web personalizados 
                         para atender às necessidades específicas de cada cliente.</p>
-                        <button>Mais informações</button>
+                        <button>Mais informações</button>                    
                     </div>
                     <div className="box2">
                     <img src={my_services2}/>
@@ -37,6 +37,12 @@ export const MyServices = () => {
                         <button>Mais informações</button>
                     </div>
                 </Content>
+
+                {/* <div className="modal">
+                    <p>
+                        teste
+                    </p>
+                </div> */}
 
                 
                 
