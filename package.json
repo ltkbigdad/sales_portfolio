@@ -1,5 +1,5 @@
 {
-  "name": "sales_portfolio",
+  "name": "Suzana_Beukhof",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.1",
-    "styled-components": "^6.0.4"
+    "react-slick": "^0.29.0",
+    "styled-components": "^6.0.4",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

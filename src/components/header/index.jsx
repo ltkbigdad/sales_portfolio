@@ -1,46 +1,66 @@
 import { useContext } from 'react'
 import { Container, Content } from "./style"
 
-import {AiOutlineMenu} from "react-icons/ai"
-import{FaLinkedin} from "react-icons/fa"
-import {FaInstagramSquare} from "react-icons/fa"
-import {MdEmail} from "react-icons/md"
-import {AiOutlineCloseCircle} from "react-icons/ai"
-import {FaGithub} from "react-icons/fa"
+import {AiOutlineMenu, AiOutlineDown} from "react-icons/ai"
+
+import logo from '../../assets/images/logo.png'
+
+
 
 import { ButtonContext } from '../../providers/buttonProvider'
 
 
 export const Header = () => {
-   const {modal, openModal, closeModal} = useContext(ButtonContext)
+   const {modal, openModal, subMenuMobile, subMenu, openSubMobile, openSub} = useContext(ButtonContext)
 
    
 
     return(
         <>
             <Container  >
-                <h1 >Douglas Braz</h1>
-                <AiOutlineMenu className='menuIcon' cursor="pointer" color="rgb(255, 255, 255)" size={25} onClick={openModal}/>
+                <div className='logo_titleBox'>
+                    <div className='titleBox'>
+                        <img  className='logo' src={logo} alt='logo' />
+                        <h1 className='title' >Suzana Beukhof</h1>
+                    </div>
+                    <p className='subTitle'>Práticas integrativas e complementares</p>
+                    <AiOutlineMenu className='menuIcon' cursor="pointer" color="#15243A" size={25} onClick={openModal }/>
+
+                </div>
                 <Content>
-                    <div className={modal} onClick={closeModal}>
-                        
+                    <div className={modal} >                        
 
                         <ul className='menu'>
-                        <li className="linkeIcon"><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dougbatista"><FaLinkedin size={25}/></a></li>
-                        <li className="instaIcon"><a target="_blank" rel="noreferrer" href="https://instagram.com/doug.developer?igshid=ZDc4ODBmNjlmNQ=="><FaInstagramSquare FaLinkedin size={25}/></a></li>
-                        <li className="emailIcon"><a target="_blank" rel="noreferrer" href="douglasbraz.dev@gmail.com"><MdEmail FaLinkedin size={25}/></a></li>
-                        <li className="gitIcon"><a target="_blank" rel="noreferrer" href="https://github.com/ltkbigdad"><FaGithub size={25}/></a></li>
+                            <li><a className='subTitle' href="#home">Home</a></li>
+                            <li><a className='subTitle' href="#aboutMe">Sobre mim</a></li>
+                            <li className='subTitle' onClick={openSubMobile}>O que eu trato <AiOutlineDown/> </li>
+                            <li><a className='subTitle' href="#contact">Contato</a></li>
+                        </ul> 
 
-                        </ul>
-                        {/* <AiOutlineCloseCircle 
-                            color="rgb(255, 255, 255)" 
-                            size={25} 
-                            className='close' 
-                            onClick={closeModal}
-                            cursor="pointer"
-                        /> */}
+                        <ul className={subMenuMobile}>
+                            <li><a className='subTitle' href="#microtherapy">Microterapia</a></li>
+                            <li><a className='subTitle' href="#biologicalLaws">Leis Biológicas</a></li>
+                            <li><a className='subTitle' href="#familyConstellation">Constalação Familiar</a></li>
+                            <li><a className='subTitle' href="#regression">Regreção Pré e Perinatal</a></li>                        
+                        </ul>          
                        
                     </div>
+
+                    <ul className='menuBox'>
+                        <li><a className='subTitle' href="#home">Home</a></li>
+                        <li><a className='subTitle' href="#aboutMe">Sobre mim</a></li>
+                        <li className='subTitle' onClick={openSub}>O que eu trato <AiOutlineDown className='icon'/> 
+                            <ul className={subMenu}>
+                                <li><a className='subTitle' href="#microtherapy">Microterapia</a></li>
+                                <li><a className='subTitle' href="#biologicalLaws">Leis Biológicas</a></li>
+                                <li><a className='subTitle' href="#familyConstellation">Constalação Familiar</a></li>
+                                <li><a className='subTitle' href="#regression">Regreção Pré e Perinatal</a></li>
+                            </ul>   
+                        </li>                            
+                        <li><a className='subTitle' href="#contact">Contato</a></li>
+                    </ul>
+
+                         
                                       
                 </Content>
             </Container>

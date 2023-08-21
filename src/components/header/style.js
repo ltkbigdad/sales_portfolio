@@ -2,109 +2,257 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(51, 51, 51);
-    height: 5rem;
+    background-color: #ffffff;
+   
+    
 
-    h1{
-        color: rgb(255, 255, 255);
-        font-family: 'Arvo', serif;
-        font-weight: 400;
-        margin-left: 10%;
-        margin-right: 10%;
+    .logo_titleBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .subTitle{
+            color: #15243A;
+            font-size: 1rem;
+
+        }
+
+        .menuIcon{
+            align-self: flex-start;
+            margin-top: 10px;
+            margin-left: 10px; 
+            margin-bottom: 10px;
+            
+        }
+        
     }
 
+    .titleBox{
+        display: flex;        
+        align-items: baseline;
+        justify-content: center;
+        width: 100%;
+
+        .title{
+
+            color: #15243A;
+            font-size: 1.9rem;
+            font-family: 'Arvo', serif;
+            font-weight: 400;
+           
+        }
+
+        .logo{
+            width: 23%;
+
+        }
+
+
+        
+    }
+
+    
+
     @media (min-width: 780px){
+        width: 90%;
+        margin: 0 auto;
+
         .menuIcon{
             display: none;
         }
+
+        .logo_titleBox{
+
+            .subTitle{          
+                font-size: 2rem;
+                :hover{
+                    border-top: 1px solid #15243A;
+                    border-bottom: 1px solid #15243A;
+
+                }
+            }
+        }
+
+        .titleBox{
+            align-items: baseline;
+
+            .title{
+            font-size: 5rem;           
+            }  
+
+            .logo{
+                width: 10%;
+
+            }
+        }
+
+        
+
+
     }
 `;
 
-export const Content = styled.div`
-    
-    
-    z-index: 5;
-    background-color: rgb(51, 51, 51);
-    
-    
-    width: 32%;
-    margin-top: 150px;
-    border-bottom-left-radius: 20px;
-    
-    
-    margin-left: 68%;
-    /* border: 1px solid red; */
-    position: absolute;
-
+export const Content = styled.div`    
+    align-self: flex-start;
+    margin-left: 10px; 
    
 
     .modal{
-        display: none;
-        margin-left: -230px;
+        display: none;        
     }
 
     .modalOpen{
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         padding-left: 20px;
         padding-bottom: 10px;
 
-        p, li{
-        font-size: 2rem;
-        color: rgb(255, 255, 255);
-        font-family: 'Arvo', serif;       
+        li{
+        font-size: 1rem;
+        color: #15243A;
+        font-family: 'Arvo', serif; 
+        cursor: pointer;
         }
 
-        a{
-          color: rgb(255, 255, 255);
+        li:hover{                
+            border-top: 1px solid #15243A;
+            border-bottom: 1px solid #15243A;
         }
 
         li{
             margin-top: 10px;
             margin-bottom: 10px;
+
+            .icon{
+                color: red;
+            }
         }
 
-        .close{            
-            align-self: flex-start;
+        a{
+            color: #15243A; 
+            cursor: pointer;
         }
 
-    }
+        .treatmentsBoxMobile{
+            display: none;
+        }
 
-    @media (min-width: 780px){
-        margin-top: 0;
-        .modal{
-            display: flex; 
-            margin-left: 0;
-           
+        .treatmentsBoxMobileOpen{
             
-
-            p, li{
-            font-size: 2rem;
-            color: rgb(255, 255, 255);
-            font-family: 'Arvo', serif;       
+            width: 13rem;
+            margin-left: 113px;
+            margin-top: 81px;
+            position: absolute;
+            /* background-color: rgba(255, 255, 255, .99); */
+            z-index: 10;
+            li{
+                font-size: 1rem;
+                color: #15243A;
+                font-family: 'Arvo', serif; 
+                cursor: pointer;
             }
 
-            a{
-              color: rgb(255, 255, 255);
+            li:hover{                
+                border-top: 1px solid #15243A;
+                border-bottom: 1px solid #15243A;
             }
 
             li{
-               margin-right: 15px;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
-            .close{            
-               display: none;
+            a{
+                color: #15243A; 
+                cursor: pointer;
             }
-
-            .menu{
-                display: flex;
-            }
-
         }
+    }
+
+    .treatmentsBox{
+        display: none;
+    }
+
+    
+
+    .menuBox{
+        display: none;
+    }
+
+    @media (min-width: 780px){
+        width: 100%;
+        margin: 0 auto;
+
+        .modalOpen{
+            display: none;
+        }
+        .treatmentsBoxMobileOpen{
+            display: none;
+        }
+        
+        .menuBox{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+
+            li{
+                cursor: pointer;
+                border-top: 1px solid #ffffff;
+                border-bottom: 1px solid #ffffff;
+            }
+            li:hover{                
+                border-top: 1px solid #15243A;
+                border-bottom: 1px solid #15243A;
+            }
+
+            a{
+                color: #15243A; 
+                cursor: pointer;
+            }
+            
+        }
+
+        .treatmentsBoxOpen{
+        
+            width: 13rem;
+            position: absolute;
+            /* background-color: rgba(255, 255, 255, .99); */
+            z-index: 10;
+            li{
+                font-size: 1rem;
+                color: #15243A;
+                font-family: 'Arvo', serif; 
+                cursor: pointer;
+            }
+
+            li:hover{                
+                border-top: 1px solid #15243A;
+                border-bottom: 1px solid #15243A;
+            }
+
+            li{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            a{
+                color: #15243A; 
+                cursor: pointer;
+            }
+        }
+
+
+        
+        
     }
 
    

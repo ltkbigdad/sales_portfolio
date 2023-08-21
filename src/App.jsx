@@ -1,14 +1,23 @@
 
 import { AboutMe } from "./components/aboutMe"
-import { CreateYourWebsite } from "./components/createYourWebsite"
+import { MerryGoRound } from "./components/merryGoRound"
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
-import { MyServices } from "./components/myServices"
+import { MyServicesMicroteraph } from "./components/myServiceMicroteraph"
 import { TalkToMe } from "./components/talkToMe"
+import { WhatIsMicrotherapy } from "./components/whatIsMicrotherapy"
+import { MyServiceBiologicalLaws } from "./components/myServiceBiologicalLaws"
 
 import  ButtonProvider  from "./providers/buttonProvider"
 
 import { Global } from "./styles/Global"
+import { WhatIsBiologicalLaws } from "./components/whatIsBiologicalLaws"
+import { MyServiceFamilyConstellation } from "./components/myServiceFamilyConstellation"
+import { WhatIsFamilyConstellation } from "./components/whatIsFamilyConstellation"
+import { WhatIsFamilyConstellationcont } from "./components/whatIsFamilyConstellationcont"
+import { MyServiceRegression } from "./components/myServicRegression"
+import { WhatIsRegression } from "./components/whatIsRegression"
+import { WhatIsFamilyConstellationFolder } from "./components/whatIsFamilyConstellationFolder"
 
 
 export const App = () => {
@@ -18,11 +27,20 @@ export const App = () => {
       <ButtonProvider>
         <Global/>
         <Header/>
-        <CreateYourWebsite/>
+        <MerryGoRound/>
         <AboutMe/>
-        <MyServices/>
+        <MyServicesMicroteraph/>
+        <WhatIsMicrotherapy/>
+        <MyServiceBiologicalLaws/>
+        <WhatIsBiologicalLaws/>
+        <MyServiceFamilyConstellation/>
+        <WhatIsFamilyConstellation/>
+        <WhatIsFamilyConstellationFolder/>
+        <WhatIsFamilyConstellationcont/>
+        <MyServiceRegression/>
+        <WhatIsRegression/>
         <TalkToMe/>
-        <Footer/>
+        {/*<Footer/> */}
       </ButtonProvider>
       
     </>
