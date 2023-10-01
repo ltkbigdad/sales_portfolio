@@ -28,7 +28,7 @@ export const Header = () => {
                         <ul className='menu'>
                         <li className="linkeIcon"><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dougbatista"><FaLinkedin size={25}/></a></li>
                         <li className="instaIcon"><a target="_blank" rel="noreferrer" href="https://instagram.com/doug.developer?igshid=ZDc4ODBmNjlmNQ=="><FaInstagramSquare FaLinkedin size={25}/></a></li>
-                        <li className="emailIcon"><a target="_blank" rel="noreferrer" href="douglasbraz.dev@gmail.com"><MdEmail FaLinkedin size={25}/></a></li>
+                        <li className="emailIcon"><a target="_blank" rel="noreferrer" href = "mailto:douglasbraz.dev@gmail.com"><MdEmail FaLinkedin size={25}/></a></li>
                         <li className="gitIcon"><a target="_blank" rel="noreferrer" href="https://github.com/ltkbigdad"><FaGithub size={25}/></a></li>
 
                         </ul>

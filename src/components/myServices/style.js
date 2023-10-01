@@ -81,6 +81,10 @@ export const Content = styled.div`
 
         }
 
+        a{
+            color: rgb(255, 255, 255);
+        }
+
         
     }
 

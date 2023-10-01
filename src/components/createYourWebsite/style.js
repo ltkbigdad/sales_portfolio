@@ -3,8 +3,6 @@ import background from "../../assets/images/background.jpg"
 
 export const Container = styled.div`
     height: 55vh;
-    border: 1px solid red;
-
     .bg{
         background-image: url(${background});
         background-repeat: no-repeat;       
@@ -62,6 +60,10 @@ export const Content = styled.div`
         margin-top: 40px;
 
         cursor: pointer;
+    }
+
+    a{
+        color: rgb(255, 255, 255);
     }
 
     @media (min-width: 780px){

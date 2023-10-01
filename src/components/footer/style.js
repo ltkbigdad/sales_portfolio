@@ -19,6 +19,10 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
+    a{
+        color: rgb(255, 255, 255);
+    }
+
     .menu{
         display: flex;
         margin-top: 30px;
